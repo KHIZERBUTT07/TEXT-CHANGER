@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background:linear-gradient(rgb(10, 190, 175),rgb(11, 12, 12));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    background-color: rgb(3, 126, 126);
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    max-width: 150px;
+}
+
+.mainbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    height: 90vh;
+    background:linear-gradient(rgb(6, 63, 100),#0d7772);
+    flex-direction: column;
+    border-radius: 20px;
+  
+}
+.container{
+    padding-block: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: rgb(14, 14, 14);
+    padding: 40px;
+    box-shadow: 0 0 50px rgb(111, 164, 168);
+}
+.container:hover{
+border: 4px dotted rgb(56, 225, 255);
+    border-top: 4px dotted rgb(199, 13, 13);
+    
+    animation: spin 5.3s linear infinite;
+    
+    box-shadow: 0 0 50px rgb(152, 198, 214);
+}
+p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    max-width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+    margin-block: 20px;
+    line-height: 2rem;
+}
+select{
+    background: none;
+    border: none;
+    color: white;
+}
+
+@keyframes spin {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+@media screen and (max-width:550px){
+    .container{
+        max-width: 20rem;
+        max-height: 20rem;
+    }
+    p{
+        line-height: 1.5rem;
+    }
+}
+@media screen and (max-width:420px){
+    .container{
+        max-width: 15rem;
+        max-height: 15rem;
+    }
+    button{
+        max-width:3.5rem;
+        font-size: 0.6rem;
+        padding: 5px;
+        font-weight: bold;
+    }
+    p{
+        
+        font-size: 0.73rem;
+        
+        line-height: 1.5rem;
+
+    }
+}
+@media screen and (min-width:420px) and (max-width:910px){
+    .container{
+        max-width: 18rem;
+        max-height: 18rem;
+    }
+    button{
+        font-size: 0.7rem;
+        padding: 5px;
+        font-weight: bold;
+    }
+    p{
+        
+        font-size: 0.73rem;
+        
+        line-height: 1.5rem;
+
+    }
+}
